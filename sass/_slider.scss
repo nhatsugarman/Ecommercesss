@@ -1,0 +1,70 @@
+.slider {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+    transition: all 0.2s linear;
+    &-container {
+        width: 550px;
+        height: 550px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -60%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 35px 0;
+    }
+    &.is-show {
+        transform: translateX(0);
+    }
+
+    &__thumbnails {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    &__active-photo {
+        width: 550px;
+        height: 550px;
+        position: relative;
+    }
+
+    &__active-close {
+        position: absolute;
+        right: 0;
+        top: -5%;
+
+        ion-icon {
+            width: 25px;
+            height: 25px;
+            color: $Orange;
+            font-weight: 700;
+        }
+    }
+
+    &__thumb {
+        width: 90px;
+        height: 90px;
+        &--active {
+            border: 2px solid $Orange;
+            border-radius: 10px;
+        }
+    }
+
+    &__active-right {
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+    &__active-left {
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+}

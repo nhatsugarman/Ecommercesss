@@ -1,0 +1,133 @@
+.products {
+    padding: 95px 50px 130px;
+    &-container {
+        display: flex;
+        align-items: center;
+        gap: 25px 125px;
+    }
+    &-desktop__active-photo {
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    &-desktop__thumbnails {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    &-desktop__thumb {
+        transition: all 0.2s linear;
+        cursor: pointer;
+        img {
+            border: 1px solid transparent;
+        }
+        &--active {
+            opacity: 0.8;
+            cursor: pointer;
+            img {
+                border: 1px solid $Orange;
+            }
+        }
+    }
+
+    &-company {
+        color: $Orange;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding-bottom: 30px;
+    }
+    &-heading {
+        color: $very-vark-blue;
+        font-size: 40px;
+        font-weight: 700;
+        padding-bottom: 50px;
+        z-index: 1;
+    }
+    &-text {
+        padding-bottom: 40px;
+    }
+    &-prices {
+        padding-bottom: 45px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    &-price {
+        color: $very-vark-blue;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &-old-price {
+        width: 100%;
+    }
+    &-discount {
+        color: $Orange;
+        background: $Pale-orange;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+
+    &-add {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--plus {
+            cursor: pointer;
+            padding: 0 5px;
+        }
+        &--minus {
+            cursor: pointer;
+            padding: 0 5px;
+        }
+    }
+
+    &-buy__quantity {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    &-buy__quantity {
+        background: $light-grayish-blue;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    &-plus-add {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &-desktop__active-photo {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .products {
+        padding: 0 25px 90px;
+        &-container {
+            flex-direction: column;
+        }
+        &-desktop {
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+        &-desktop__active-photo {
+            img {
+                border-radius: 0;
+            }
+        }
+        &-heading {
+            font-size: 28px;
+            padding-bottom: 30px;
+        }
+        &-company {
+            padding-bottom: 20px;
+        }
+    }
+}

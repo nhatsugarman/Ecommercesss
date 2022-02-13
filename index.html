@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header-container">
+                    <div href="#" class="header-menu-mobile mobile">
+                        <div class="menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#" class="header-logo">
+                            <img src="./images/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <a href="#" class="header-logo desktop">
+                        <img src="./images/logo.svg" alt="">
+                    </a>
+                    <ul class="menu">
+                        <a href="#" class="menu-close mobile">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </a>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Collections</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Men</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Women</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">About</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="header-right">
+                        <div href="#" class="header-cart">
+                            <a href="#" class="header-cart-icon">
+                                <img src="./images/icon-cart.svg" alt="">
+                            </a>
+                            <div class="header-cart-content">
+
+                                <h3 class="header-cart__heading">Cart</h3>
+                                <div class="header-cart__empty">
+                                    Your cart is empty.
+                                </div>
+                                <!-- <div class="header-cart__full">
+                                    <div class="header-cart__product">
+                                        <a class="header-cart__img">
+                                            <img src="images/image-product-1-thumbnail.jpg" alt="Product">
+                                        </a>
+                                        <div class="header-cart__text">
+                                            <p>Autumn Limited Edition...</p>
+                                            <div class="header-cart__price">$125.00 *
+                                                <span>$125.00</span>
+                                            </div>
+                                        </div>
+                                        <a class="header-cart__bin">
+                                            <ion-icon name="trash-outline"></ion-icon>
+                                        </a>
+                                    </div>
+                                    <a class="header-cart__btn btn btn__full">Checkout</a>
+                                </div> -->
+
+                            </div>
+
+
+                        </div>
+
+                        <a href="#" class="header-user">
+                            <img src="./images/image-avatar.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <main class="main">
+            <section class="products">
+                <div class="container">
+                    <div class="products-container">
+                        <div class="products-desktop">
+                            <a class="products-desktop__active-photo">
+                                <img src="images/image-product-1.jpg" alt="Product" />
+                            </a>
+                            <div class="products-desktop__thumbnails desktop">
+                                <div class="products-desktop__thumb products-desktop__thumb--active"
+                                    data-src="images/image-product-1.jpg"><img
+                                    src="images/image-product-1-thumbnail.jpg" alt="product thumbnail">
+                                </div>
+                                <div class="products-desktop__thumb" data-src="images/image-product-2.jpg">
+                                    <img src="images/image-product-2-thumbnail.jpg" alt="product thumbnail">
+                                </div>
+                                <div class="products-desktop__thumb" data-src="images/image-product-3.jpg">
+                                    <img src="images/image-product-3-thumbnail.jpg" alt="product thumbnail">
+                                </div>
+                                <div class="products-desktop__thumb" data-src="images/image-product-4.jpg">
+                                    <img src="images/image-product-4-thumbnail.jpg" alt="product thumbnail">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="products-buy">
+                            <h3 class="products-company">Sneaker company</h3>
+                            <h1 class="products-heading">Fall Limited Edition Sneakers</h1>
+                            <p class="products-text">
+                                These low-profile sneakers are your perfect casual wear companion.
+                                Featuring a durable rubber outer sole, they'll withstand everything the weather can
+                                offer.
+                            </p>
+                            <div class="products-prices">
+                                <p class="products-price">$125.00</p>
+                                <p class="products-discount">50%</p>
+                                <p class="products-old-price">$250.00</p>
+                            </div>
+                            <div class="products-add">
+                                <div class="products-buy__quantity">
+
+                                    <div class="products-add--plus">
+                                        <img src="images/icon-plus.svg" alt="plus">
+                                    </div>
+                                    <p class="products-quantity">0</p>
+                                    <div class="products-add--minus">
+                                        <img src="images/icon-minus.svg" alt="minus">
+                                    </div>
+                                </div>
+                                <div class="products-plus-add">
+                                    <img src="./images/icon-cart.svg" alt="">
+                                    <a href="#" class="btn products-add-btn">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="slider">
+                <div class="slider-container">
+                    <div class="slider__active-photo">
+                        <a class="slider__active-close">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </a>
+                        <a href="#" class="slider__active-left btn-direction">
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+
+                        <a href="#">
+                            <img src="images/image-product-1.jpg" alt="Product" />
+                        </a>
+                        <a href="#" class="slider__active-right btn-direction">
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="slider__thumbnails">
+                        <a class="slider__thumb slider__thumb--active" data-src="images/image-product-1.jpg">
+                            <img src="./images/image-product-1-thumbnail.jpg" alt="">
+                        </a>
+                        <a class="slider__thumb" data-src="images/image-product-2.jpg">
+                            <img src="./images/image-product-2-thumbnail.jpg" alt="">
+                        </a>
+                        <a class="slider__thumb" data-src="images/image-product-3.jpg">
+                            <img src="./images/image-product-3-thumbnail.jpg" alt="">
+                        </a>
+                        <a class="slider__thumb" data-src="images/image-product-4.jpg">
+                            <img src="./images/image-product-4-thumbnail.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./script/app.js"></script>
+
+</body>
+
+</html>
