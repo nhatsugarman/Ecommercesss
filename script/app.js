@@ -18,6 +18,10 @@ const sliderThumbs = Array.from($$('.slider__thumb'));
 const prevBtnSlide = $(".slider__active-left");
 const nextBtnSlide = $(".slider__active-right");
 
+const nextBtnSlideMobile = $('.products-mobile-next')
+const prevBtnSlideMobile = $('.products-mobile-prev')
+
+
 const inputValue = $(".products-quantity");
 
 const plusBtn = $(".products-add--plus");
@@ -89,7 +93,6 @@ function alterClass(element, class_name, processName) {
 desktopSliderThumbs.forEach(item => {
     item.addEventListener("click", function () {
         showClickedPhoto(item, desktopSliderThumbs, desktopSliderImg, "products-desktop__thumb--active");
-        // sliderTracker(item, lightBoxSliderThumbs, lightBoxSliderImg, "slider-lightbox__thumb--active");
     });
 });
 
@@ -108,6 +111,34 @@ function showClickedPhoto(element, siblings, visibleImg, class_name) {
 // Click the btn-prev and forward
 prevBtnSlide.addEventListener("click", (e) => actionSlide("previous"));
 nextBtnSlide.addEventListener("click", (e) => actionSlide("next"));
+
+nextBtnSlideMobile.addEventListener("click", (e) => actionSlideMobile("next"));
+prevBtnSlideMobile.addEventListener("click", (e) => actionSlideMobile("previous"));
+
+
+function actionSlideMobile(action) {
+    const activeSlideMobile = $$('.next-slide')
+    activeSlideMobile.forEach((item, index) => {
+        if (item.classList.contains("active")) {
+            currentImgIndex = index;
+        }
+    });
+
+    if (action === "next") {
+        if (currentImgIndex < sliderThumbs.length - 1) {
+            activeSlideMobile[currentImgIndex].classList.remove("active");
+            currentImgIndex++;
+            activeSlideMobile[currentImgIndex].classList.add("active");
+        }
+    } else if (action === "previous") {
+        if (currentImgIndex > 0) {
+            activeSlideMobile[currentImgIndex].classList.remove("active");
+            currentImgIndex--;
+            activeSlideMobile[currentImgIndex].classList.add("active");
+        }
+    }
+}
+
 
 
 function actionSlide(action) {
@@ -181,8 +212,8 @@ function addToCart() {
                 </a>
                 <div class="header-cart__text">
                     <p>Autumn Limited Edition...</p>
-                    <div class="header-cart__price">$125.00 *
-                        <span>$125.00</span>
+                    <div class="header-cart__price">$125.00 * ${numberValue}
+                        <span>$${125*numberValue}.00</span>
                     </div>
                 </div>
                 <a class="header-cart__bin">
