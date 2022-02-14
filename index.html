@@ -99,7 +99,7 @@
             <section class="products">
                 <div class="container">
                     <div class="products-container">
-                        <div class="products-desktop">
+                        <div class="products-desktop desktop">
                             <a class="products-desktop__active-photo">
                                 <img src="images/image-product-1.jpg" alt="Product" />
                             </a>
@@ -118,6 +118,20 @@
                                     <img src="images/image-product-4-thumbnail.jpg" alt="product thumbnail">
                                 </div>
                             </div>
+                        </div>
+                        <div class="products-mobile mobile">
+                            <a class="btn-direction products-mobile-prev">
+                                <ion-icon name="chevron-back-outline"></ion-icon>
+                            </a>
+                            <a class="products-mobile__active-photo">
+                                <img src="images/image-product-1.jpg" alt="Product" class="next-slide active"/>
+                                <img src="images/image-product-2.jpg" alt="Product"  class="next-slide"/>
+                                <img src="images/image-product-3.jpg" alt="Product" class="next-slide"/>
+                                <img src="images/image-product-4.jpg" alt="Product" class="next-slide"/>
+                            </a>
+                            <a class="btn-direction products-mobile-next">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </a>
                         </div>
 
                         <div class="products-buy">
@@ -145,15 +159,19 @@
                                     </div>
                                 </div>
                                 <div class="products-plus-add">
-                                    <img src="./images/icon-cart.svg" alt="">
-                                    <a href="#" class="btn products-add-btn">Add to cart</a>
+                                    <img src="./images/icon-cart.svg" alt="" class="desktop">
+                                    <a href="#" class="btn products-add-btn">
+                                       
+                                        <span><img src="./images/icon-cart.svg" alt="" class="mobile"></span>
+                                        Add to cart
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="slider">
+            <section class="slider desktop">
                 <div class="slider-container">
                     <div class="slider__active-photo">
                         <a class="slider__active-close">
