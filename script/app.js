@@ -237,8 +237,8 @@ function emptyCart() {
     if (cartIcon.contains(cartIcon.querySelector("span"))) {
         console.log(cartIcon.querySelectorAll("span"));
 
-        Array.from(cartIcon.querySelectorAll("span")).map((e) => {
-            e.remove();
+        Array.from(cartIcon.querySelectorAll("span")).map((item) => {
+            item.remove();
         });
     }
     cartContent.innerHTML = `
